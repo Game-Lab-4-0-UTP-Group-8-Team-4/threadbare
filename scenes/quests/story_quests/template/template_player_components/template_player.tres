@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=21 format=3 uid="uid://vwf8e1v8brdp"]
+[gd_resource type="SpriteFrames" load_steps=24 format=3 uid="uid://vwf8e1v8brdp"]
 
 [ext_resource type="Texture2D" uid="uid://dsrlqqiwqq8wc" path="res://Sprites/Animaciones Agente anonimo/Animaciones/golpe/golpe0.png" id="1_l3u6n"]
 [ext_resource type="Texture2D" uid="uid://bwsrel5ei6u51" path="res://Sprites/Animaciones Agente anonimo/Animaciones/golpe/golpe1.png" id="2_w27rc"]
@@ -17,9 +17,21 @@
 [ext_resource type="Texture2D" uid="uid://cxhv6y8qtw1bn" path="res://Sprites/Animaciones Agente anonimo/Animaciones/Espada/sprite_3.png" id="11_y4r1e"]
 [ext_resource type="Texture2D" uid="uid://c8t0hgqfg7mmr" path="res://Sprites/Animaciones Agente anonimo/Animaciones/Espada/sprite_4.png" id="12_stahy"]
 [ext_resource type="Texture2D" uid="uid://w2emkaoq22o4" path="res://Sprites/Animaciones Agente anonimo/Animaciones/Espada/sprite_5.png" id="13_qpe4y"]
-[ext_resource type="Texture2D" uid="uid://dvr6kcytytbno" path="res://Sprites/Animaciones Agente anonimo/Animaciones/salto/sprite_0.png" id="18_s1n7w"]
-[ext_resource type="Texture2D" uid="uid://dh14j4sgers0u" path="res://Sprites/Animaciones Agente anonimo/Animaciones/salto/sprite_1.png" id="19_l662q"]
-[ext_resource type="Texture2D" uid="uid://crweeg5tijcgl" path="res://Sprites/Animaciones Agente anonimo/Animaciones/salto/sprite_2.png" id="20_7obxm"]
+[ext_resource type="Texture2D" uid="uid://i6d88monvquj" path="res://Sprites/INTI/sprite_0.png" id="18_l3u6n"]
+[ext_resource type="Texture2D" uid="uid://cirhq01b6f666" path="res://Sprites/INTI/sprite_1.png" id="19_w27rc"]
+[ext_resource type="Texture2D" uid="uid://ch4ieocw1olo3" path="res://Sprites/INTI/sprite_2.png" id="20_6wpxs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpjoy"]
+atlas = ExtResource("18_l3u6n")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnkh0"]
+atlas = ExtResource("19_w27rc")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kaewf"]
+atlas = ExtResource("20_6wpxs")
+region = Rect2(0, 0, 1024, 1024)
 
 [resource]
 animations = [{
@@ -91,13 +103,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("18_s1n7w")
+"texture": SubResource("AtlasTexture_rpjoy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_l662q")
+"texture": SubResource("AtlasTexture_fnkh0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_7obxm")
+"texture": SubResource("AtlasTexture_kaewf")
 }],
 "loop": true,
 "name": &"walk",
