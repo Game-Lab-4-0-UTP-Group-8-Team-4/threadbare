@@ -1,14 +1,17 @@
-[gd_scene load_steps=25 format=4 uid="uid://dt1pkdy7gmfuy"]
+[gd_scene load_steps=28 format=3 uid="uid://dt1pkdy7gmfuy"]
 
+[ext_resource type="Texture2D" uid="uid://digdy42hokhwo" path="res://Sprites/Día y noche/Layer 1_sprite_2.png" id="1_2news"]
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_xfhr3"]
-[ext_resource type="Texture2D" uid="uid://c5f5nrrd6nbk8" path="res://Sprites/Día y noche/Layer 1_sprite_1.png" id="2_rayjy"]
+[ext_resource type="Texture2D" uid="uid://b20en7k1dar50" path="res://Sprites/edificios/Layer 1_sprite_3.png" id="3_2news"]
 [ext_resource type="SpriteFrames" uid="uid://vwf8e1v8brdp" path="res://scenes/quests/story_quests/template/template_player_components/template_player.tres" id="3_jgqmk"]
 [ext_resource type="Texture2D" uid="uid://kqtoahlv2ix1" path="res://Sprites/sigma_9_v1/New Piskel (1).png" id="4_d0asx"]
+[ext_resource type="Texture2D" uid="uid://cmbwpdn6odg8u" path="res://Sprites/edificios/Layer 1_sprite_4.png" id="4_nq3sv"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="5_2i4dk"]
+[ext_resource type="Texture2D" uid="uid://bi61j0rmxt754" path="res://Sprites/edificios/Layer 1_sprite_5.png" id="5_whesc"]
 [ext_resource type="Texture2D" uid="uid://ciry0l8tyms3p" path="res://Sprites/sigma_9_v1/New Piskel (2).png" id="5_xrhgk"]
 [ext_resource type="Texture2D" uid="uid://7e4yjgctoqmi" path="res://Sprites/sigma_9_v1/New Piskel (3).png" id="6_arp7g"]
+[ext_resource type="Texture2D" uid="uid://1kh1ljn5ejg" path="res://Sprites/edificios/Layer 1_sprite_6.png" id="6_el4tt"]
 [ext_resource type="Resource" uid="uid://ba25x2i4n6uod" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_intro.dialogue" id="6_xrhgk"]
-[ext_resource type="PackedScene" uid="uid://v3usqiwy5wpr" path="res://scenes/game_elements/props/decoration/rock/rock.tscn" id="7_arp7g"]
 [ext_resource type="Texture2D" uid="uid://c548kkapowcxd" path="res://Sprites/sigma_9_v1/New Piskel (4).png" id="7_djolm"]
 [ext_resource type="Texture2D" uid="uid://dsnh2nmwhj17m" path="res://Sprites/Samurai_v1/PeleaSamuerai/SAMURAI ESPADAS0.png" id="8_djolm"]
 [ext_resource type="Texture2D" uid="uid://b1kcj708fyw5v" path="res://Sprites/SamuraiRage_v1/Samurai y Guerrero sin nombre0.png" id="8_xrhgk"]
@@ -175,20 +178,41 @@ texture_filter = 1
 scale = Vector2(1.00009, 1)
 
 [node name="TileMapLayers" type="Node2D" parent="."]
+modulate = Color(0.705194, 0.705194, 0.705194, 1)
 
-[node name="Ground" type="TileMapLayer" parent="TileMapLayers"]
-tile_map_data = PackedByteArray("AAAAAAUAAQAAAAEAAAABAAUAAQABAAEAAAACAAUAAQABAAEAAAADAAUAAQABAAEAAAAEAAUAAQABAAEAAAAFAAUAAQABAAEAAAAGAAUAAQABAAEAAAAHAAUAAQABAAEAAAAIAAUAAQABAAEAAAAJAAUAAQABAAEAAAAKAAUAAQABAAEAAAALAAUAAQABAAEAAAAMAAUAAQABAAEAAAANAAUAAQABAAEAAAAOAAUAAQACAAEAAAAAAAYAAQAAAAEAAAAAAAcAAQAAAAEAAAAAAAgAAQAAAAEAAAABAAYAAQABAAEAAAABAAcAAQABAAEAAAABAAgAAQABAAEAAAACAAYAAQABAAEAAAACAAcAAQABAAEAAAACAAgAAQABAAEAAAADAAYAAQABAAEAAAADAAcAAQABAAEAAAADAAgAAQABAAEAAAAEAAYAAQABAAEAAAAEAAcAAQABAAEAAAAEAAgAAQABAAEAAAAFAAYAAQABAAEAAAAFAAcAAQABAAEAAAAFAAgAAQABAAEAAAAGAAYAAQABAAEAAAAGAAcAAQABAAEAAAAGAAgAAQABAAEAAAAHAAYAAQABAAEAAAAHAAcAAQABAAEAAAAHAAgAAQABAAEAAAAIAAYAAQABAAEAAAAIAAcAAQABAAEAAAAIAAgAAQABAAEAAAAJAAYAAQABAAEAAAAJAAcAAQABAAEAAAAJAAgAAQABAAEAAAAKAAYAAQABAAEAAAAKAAcAAQABAAEAAAAKAAgAAQABAAEAAAALAAYAAQABAAEAAAALAAcAAQABAAEAAAALAAgAAQABAAEAAAAMAAYAAQABAAEAAAAMAAcAAQABAAEAAAAMAAgAAQABAAEAAAANAAYAAQABAAEAAAANAAcAAQABAAEAAAANAAgAAQABAAEAAAAOAAYAAQACAAEAAAAOAAcAAQACAAEAAAAOAAgAAQACAAEAAAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAABAAEAAQABAAEAAAACAAEAAQABAAEAAAACAAIAAQABAAEAAAADAAIAAQABAAEAAAAEAAIAAQABAAEAAAAFAAIAAQABAAEAAAAFAAMAAQABAAEAAAAGAAMAAQABAAEAAAAHAAQAAQABAAEAAAAIAAQAAQABAAEAAAAOAAQAAQACAAEAAAAOAAMAAQACAAEAAAAOAAIAAQACAAEAAAAOAAEAAQACAAEAAAAOAAAAAQACAAAAAAANAAQAAQABAAEAAAANAAMAAQABAAEAAAANAAIAAQABAAEAAAANAAEAAQABAAEAAAANAAAAAQABAAAAAAAMAAQAAQABAAEAAAAMAAMAAQABAAEAAAAMAAIAAQABAAEAAAAMAAEAAQABAAEAAAAMAAAAAQABAAAAAAALAAQAAQABAAEAAAALAAMAAQABAAEAAAALAAIAAQABAAEAAAALAAEAAQABAAEAAAALAAAAAQABAAAAAAAKAAQAAQABAAEAAAAKAAMAAQABAAEAAAAKAAIAAQABAAEAAAAKAAEAAQABAAEAAAAKAAAAAQABAAAAAAAJAAQAAQABAAEAAAAJAAMAAQABAAEAAAAJAAIAAQABAAEAAAAJAAEAAQABAAEAAAAJAAAAAQABAAAAAAAIAAMAAQABAAEAAAAIAAIAAQABAAEAAAAIAAEAAQABAAEAAAAIAAAAAQABAAAAAAAHAAMAAQABAAEAAAAHAAIAAQABAAEAAAAHAAEAAQABAAEAAAAHAAAAAQABAAAAAAAGAAQAAQABAAEAAAAGAAIAAQABAAEAAAAGAAEAAQABAAEAAAAGAAAAAQABAAAAAAAFAAQAAQABAAEAAAAFAAEAAQABAAEAAAAFAAAAAQABAAAAAAAEAAQAAQABAAEAAAAEAAMAAQABAAEAAAAEAAEAAQABAAEAAAAEAAAAAQABAAAAAAADAAQAAQABAAEAAAADAAMAAQABAAEAAAADAAEAAQABAAEAAAADAAAAAQABAAAAAAACAAQAAQABAAEAAAACAAMAAQABAAEAAAACAAAAAQABAAAAAAABAAQAAQABAAEAAAABAAMAAQABAAEAAAABAAIAAQABAAEAAAABAAAAAQABAAAAAAAAAAQAAQAAAAEAAAAAAAMAAQAAAAEAAAAAAAIAAQAAAAEAAAA=")
+[node name="Fondo" type="TileMapLayer" parent="TileMapLayers"]
+
+[node name="Cielo" type="Sprite2D" parent="TileMapLayers/Fondo"]
+position = Vector2(491.956, 271)
+scale = Vector2(0.445991, 0.510793)
+texture = ExtResource("1_2news")
+
+[node name="Edificios" type="TileMapLayer" parent="TileMapLayers"]
 tile_set = ExtResource("1_xfhr3")
 metadata/_edit_lock_ = true
 
-[node name="IntroImage" type="Sprite2D" parent="TileMapLayers"]
-position = Vector2(656.938, 233)
-scale = Vector2(0.197708, 0.211039)
-texture = ExtResource("2_rayjy")
+[node name="Edificios1" type="Sprite2D" parent="TileMapLayers/Edificios"]
+position = Vector2(491.588, 277.763)
+scale = Vector2(0.424149, 0.493678)
+texture = ExtResource("3_2news")
+
+[node name="Edificios2" type="Sprite2D" parent="TileMapLayers/Edificios"]
+position = Vector2(480.957, 269.882)
+scale = Vector2(0.437461, 0.501722)
+texture = ExtResource("4_nq3sv")
+
+[node name="Edificios3" type="Sprite2D" parent="TileMapLayers/Edificios"]
+position = Vector2(481.773, 272.132)
+scale = Vector2(0.431781, 0.500257)
+texture = ExtResource("5_whesc")
 
 [node name="Sand" type="TileMapLayer" parent="TileMapLayers"]
-tile_map_data = PackedByteArray("AAANAAEABgACAAAAAAANAAIABgADAAEAAAANAAMABgADAAEAAAANAAQABgADAAEAAAALAAEABgABAAMAAAALAAUABgABAAMAAAAMAAEABgABAAMAAAAMAAUABgABAAMAAAANAAUABgACAAIAAAAAAAcAAQAGAAMAAAABAAcAAQAGAAMAAAACAAcAAQAGAAMAAAADAAcAAQAGAAMAAAAEAAcAAQAGAAMAAAAFAAcAAQAGAAMAAAAGAAcAAQAGAAMAAAAHAAcAAQAGAAMAAAAIAAcAAQAGAAMAAAAJAAcAAQAGAAMAAAAKAAcAAQAGAAMAAAALAAcAAQAGAAMAAAAMAAcAAQAGAAMAAAANAAcAAQAGAAMAAAAOAAcAAQAGAAMAAAAKAAEABgABAAMAAAAJAAEABgABAAMAAAAIAAEABgABAAMAAAAHAAEABgAAAAAAAAAHAAIABgADAAEAAAAHAAMABgADAAEAAAAHAAQABgADAAEAAAAHAAUABgAAAAIAAAAIAAUABgABAAMAAAAJAAUABgABAAMAAAAKAAUABgABAAMAAAA=")
 tile_set = ExtResource("1_xfhr3")
+
+[node name="Puente" type="Sprite2D" parent="TileMapLayers/Sand"]
+position = Vector2(489.676, 292.809)
+scale = Vector2(0.409416, 0.459357)
+texture = ExtResource("6_el4tt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(487.956, 295)
@@ -206,7 +230,7 @@ y_sort_enabled = true
 
 [node name="Character" type="AnimatedSprite2D" parent="OnTheGround"]
 position = Vector2(400, 349)
-scale = Vector2(0.0683594, 0.0683594)
+scale = Vector2(0.156239, 0.155273)
 sprite_frames = ExtResource("3_jgqmk")
 animation = &"idle"
 autoplay = "idle"
@@ -218,14 +242,14 @@ libraries = {
 }
 
 [node name="Sigma9" type="AnimatedSprite2D" parent="OnTheGround"]
-position = Vector2(754.536, 303.873)
-scale = Vector2(0.0385742, 0.0385742)
+position = Vector2(742.933, 195)
+scale = Vector2(0.105604, 0.102171)
 sprite_frames = SubResource("SpriteFrames_e54re")
 animation = &"idle"
 autoplay = "idle"
 
 [node name="Samurai" type="AnimatedSprite2D" parent="OnTheGround"]
-position = Vector2(681.575, 310.873)
+position = Vector2(1000.91, 200)
 scale = Vector2(0.0575001, 0.0560913)
 sprite_frames = SubResource("SpriteFrames_djolm")
 animation = &"ataque"
@@ -233,7 +257,7 @@ autoplay = "ataque"
 frame_progress = 0.591613
 
 [node name="Guerrero_sin_nombre" type="AnimatedSprite2D" parent="OnTheGround"]
-position = Vector2(599.763, 311.686)
+position = Vector2(986.911, 301)
 scale = Vector2(0.0560156, 0.0560156)
 sprite_frames = SubResource("SpriteFrames_2news")
 animation = &"idle"
@@ -248,6 +272,3 @@ dialogue = ExtResource("6_xrhgk")
 animation_player = NodePath("../OnTheGround/AnimationPlayer")
 next_scene = "uid://coi4lvxir542y"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
-
-[node name="Rock" parent="." instance=ExtResource("7_arp7g")]
-position = Vector2(125, 403)
