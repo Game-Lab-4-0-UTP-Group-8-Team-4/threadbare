@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://63dpkp3ypwwl"]
+[gd_scene load_steps=12 format=4 uid="uid://b28ex3tmywffh"]
 
 [ext_resource type="Script" uid="uid://cp54mgi54nywo" path="res://scenes/game_logic/fill_game_logic.gd" id="1_y7rr1"]
 [ext_resource type="Resource" uid="uid://3vrn5jdxov37" path="res://scenes/quests/story_quests/template/2_template_combat/template_combat_components/template_combat.dialogue" id="2_nfhmj"]
