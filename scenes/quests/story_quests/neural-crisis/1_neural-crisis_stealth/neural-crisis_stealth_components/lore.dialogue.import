@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://2n3ulddxiiud"
+path="res://.godot/imported/lore.dialogue-aaaeedf8317c7f72c102a2f33b97bb49.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/lore.dialogue"
+dest_files=["res://.godot/imported/lore.dialogue-aaaeedf8317c7f72c102a2f33b97bb49.tres"]
+
+[params]
+
+defaults=true

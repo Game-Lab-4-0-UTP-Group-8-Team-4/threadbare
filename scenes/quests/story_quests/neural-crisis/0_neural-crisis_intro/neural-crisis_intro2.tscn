@@ -7,10 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://caarrfq4ju4vb" path="res://Sprites/edificios/Layer 1_sprite_5.png" id="5_whesc"]
 [ext_resource type="Texture2D" uid="uid://b40acl0evk6s5" path="res://Sprites/edificios/Layer 1_sprite_6.png" id="6_nq3sv"]
 [ext_resource type="PackedScene" uid="uid://v3usqiwy5wpr" path="res://scenes/game_elements/props/decoration/rock/rock.tscn" id="7_arp7g"]
-[ext_resource type="SpriteFrames" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_sigma9.tres" id="7_djolm"]
+[ext_resource type="SpriteFrames" uid="uid://7jj5h3dajwdl" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_sigma9.tres" id="7_djolm"]
 [ext_resource type="SpriteFrames" uid="uid://d4ec3w2k3b3up" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_player.tres" id="7_nq3sv"]
 [ext_resource type="SpriteFrames" uid="uid://cvckqgj4yftbt" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_dron.tres" id="8_ocegd"]
-[ext_resource type="SpriteFrames" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_suprema.tres" id="9_gku53"]
+[ext_resource type="SpriteFrames" uid="uid://bbq4o0cim8pjx" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_suprema.tres" id="9_gku53"]
 [ext_resource type="AudioStream" uid="uid://86ahj6y42u12" path="res://Sprites/sonidos/sounds-of-the-city-central-park-lojaecuador-soundscape-223070 (1).mp3" id="22_whesc"]
 [ext_resource type="Resource" uid="uid://ba25x2i4n6uod" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_intro.dialogue" id="28_yfsus"]
 
