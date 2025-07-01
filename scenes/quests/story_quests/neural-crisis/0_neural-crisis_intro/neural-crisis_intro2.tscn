@@ -159,6 +159,7 @@ y_sort_enabled = true
 
 [node name="Character" type="AnimatedSprite2D" parent="OnTheGround"]
 position = Vector2(400, 349)
+rotation = -6.28319
 scale = Vector2(0.176923, 0.173034)
 sprite_frames = ExtResource("7_nq3sv")
 animation = &"idle"
@@ -173,50 +174,8 @@ autoplay = "RESET"
 speed_scale = 2.313
 
 [node name="Sigma10" type="AnimatedSprite2D" parent="OnTheGround"]
-position = Vector2(455.959, 199)
-scale = Vector2(0.0695394, 0.0756834)
-sprite_frames = ExtResource("7_djolm")
-animation = &"idle"
-autoplay = "idle"
-
-[node name="Sigma9" type="AnimatedSprite2D" parent="OnTheGround/Sigma10"]
-position = Vector2(5192.3, 3394.26)
-scale = Vector2(1.68221, 1.55173)
-sprite_frames = ExtResource("7_djolm")
-animation = &"idle"
-autoplay = "idle"
-
-[node name="Sigma9" type="AnimatedSprite2D" parent="OnTheGround/Sigma10/Sigma9"]
-position = Vector2(379.875, -3211.52)
-scale = Vector2(0.945205, 0.924695)
-sprite_frames = ExtResource("7_djolm")
-animation = &"idle"
-autoplay = "idle"
-
-[node name="Sigma9" type="AnimatedSprite2D" parent="OnTheGround/Sigma10/Sigma9/Sigma9"]
-position = Vector2(-8370.23, 2884.66)
-scale = Vector2(1.09437, 0.984142)
-sprite_frames = ExtResource("7_djolm")
-animation = &"idle"
-autoplay = "idle"
-
-[node name="Sigma10" type="AnimatedSprite2D" parent="OnTheGround/Sigma10/Sigma9/Sigma9"]
-position = Vector2(-5659.38, 2548.82)
-scale = Vector2(1.04164, 1.04022)
-sprite_frames = ExtResource("7_djolm")
-animation = &"idle"
-autoplay = "idle"
-
-[node name="Sigma9" type="AnimatedSprite2D" parent="OnTheGround/Sigma10/Sigma9/Sigma9/Sigma10"]
-position = Vector2(3222.8, 189.644)
-scale = Vector2(1.00462, 1.01953)
-sprite_frames = ExtResource("7_djolm")
-animation = &"idle"
-autoplay = "idle"
-
-[node name="Sigma10" type="AnimatedSprite2D" parent="OnTheGround/Sigma10"]
-position = Vector2(-1605.71, -1745.51)
-scale = Vector2(1.29462, 1.07744)
+position = Vector2(496, 296)
+scale = Vector2(0.157857, 0.154053)
 sprite_frames = ExtResource("7_djolm")
 animation = &"idle"
 autoplay = "idle"
@@ -225,36 +184,37 @@ autoplay = "idle"
 position = Vector2(167.985, 203.781)
 scale = Vector2(0.052339, 0.0800293)
 sprite_frames = ExtResource("8_ocegd")
-animation = &"dron"
-autoplay = "dron"
+animation = &"alerted"
+autoplay = "alerted"
 
 [node name="Guerrero_sin_nombre" type="AnimatedSprite2D" parent="OnTheGround/Dron"]
 position = Vector2(10499.4, -987.042)
 scale = Vector2(1.35671, 1.06973)
 sprite_frames = ExtResource("8_ocegd")
-animation = &"dron"
-autoplay = "dron"
+animation = &"alerted"
+autoplay = "alerted"
 
 [node name="Guerrero_sin_nombre2" type="AnimatedSprite2D" parent="OnTheGround/Dron"]
 position = Vector2(-7267.16, -1146.37)
 scale = Vector2(1.50797, 1.06145)
 sprite_frames = ExtResource("8_ocegd")
-animation = &"dron"
-autoplay = "dron"
+animation = &"alerted"
+autoplay = "alerted"
 
 [node name="Guerrero_sin_nombre" type="AnimatedSprite2D" parent="OnTheGround/Dron/Guerrero_sin_nombre2"]
-position = Vector2(13609.5, 2199.31)
+position = Vector2(13245, 2295.1)
 scale = Vector2(0.977856, 1.01529)
 sprite_frames = ExtResource("8_ocegd")
-animation = &"dron"
-autoplay = "dron"
+animation = &"alerted"
+autoplay = "alerted"
 
 [node name="Guerrero_sin_nombre3" type="AnimatedSprite2D" parent="OnTheGround/Dron"]
-position = Vector2(-9582.66, 1546.79)
+position = Vector2(-7795.05, 1577.16)
 scale = Vector2(1.21527, 0.956766)
 sprite_frames = ExtResource("8_ocegd")
-animation = &"dron"
-autoplay = "dron"
+animation = &"alerted"
+autoplay = "alerted"
+frame_progress = 0.921772
 
 [node name="ia suprema" type="AnimatedSprite2D" parent="OnTheGround"]
 position = Vector2(-261.976, 643)
