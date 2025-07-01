@@ -7,8 +7,8 @@ script = ExtResource("1_wnfk2")
 title = "Neural crisis"
 description = "En un mundo parecido al nuestro, la humanidad se  volvio super dependiente de la inteligencia artificial, que fue corrompida por organizaciones poderosas, que la usan para manipular a la población mundial.
 Akori una IA entrenada por la resistencia OpenSource, buscará junto con tu ayuda infectar el codigo de la IA con conocimiento ancestral incaico."
-authors = Array[String]([])
-affiliation = ""
-first_scene = "uid://dt1pkdy7gmfuy"
+authors = Array[String](["Alexandra Alarcon", "Fabrizio Arellano", "Pierina Macavilca", "Joaquin Pando", "Xiomara Torres"])
+affiliation = "Endless"
+first_scene = "uid://qnxf7be2bdbp"
 animation_name = &""
 metadata/_custom_type_script = "uid://dts1hwdy3phin"
