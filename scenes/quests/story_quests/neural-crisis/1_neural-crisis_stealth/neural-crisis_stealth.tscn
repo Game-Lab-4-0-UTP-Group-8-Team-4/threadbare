@@ -1,8 +1,8 @@
 [gd_scene load_steps=43 format=4 uid="uid://c524ecq3su2nb"]
 
-[ext_resource type="Script" uid="uid://criv87esy1oap" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural_crisis_stealth.gd" id="1_75eyt"]
-[ext_resource type="Script" uid="uid://b4grlj70m132a" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/neural_crisis_stealth_game_logic.gd" id="1_fs2eh"]
-[ext_resource type="TileSet" uid="uid://fnjijgyxu0fr" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/neural-crisis_stealth2.tres" id="2_5dbtc"]
+[ext_resource type="Script" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural_crisis_stealth.gd" id="1_75eyt"]
+[ext_resource type="Script" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/neural_crisis_stealth_game_logic.gd" id="1_fs2eh"]
+[ext_resource type="TileSet" uid="uid://cl571bnnemuyl" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/neural-crisis_stealth2.tres" id="2_5dbtc"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="3_bvm3m"]
 [ext_resource type="SpriteFrames" uid="uid://d4ec3w2k3b3up" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_player.tres" id="6_cpfs4"]
 [ext_resource type="PackedScene" uid="uid://d37mebu7atru7" path="res://scenes/game_elements/characters/enemies/guard/guard.tscn" id="6_fg25g"]

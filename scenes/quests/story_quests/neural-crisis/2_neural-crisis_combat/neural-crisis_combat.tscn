@@ -6880,7 +6880,6 @@ texture = ExtResource("4_8wsgk")
 20:16/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8wsgk"]
-load_path = "res://.godot/imported/Untitled (3).jpg-302a55c4e0296ac83b8f11024359c444.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sfkdd"]
 texture = SubResource("CompressedTexture2D_8wsgk")
