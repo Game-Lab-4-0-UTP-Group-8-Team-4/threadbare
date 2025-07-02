@@ -1,5 +1,6 @@
-[gd_scene load_steps=35 format=4 uid="uid://c524ecq3su2nb"]
+[gd_scene load_steps=43 format=4 uid="uid://c524ecq3su2nb"]
 
+[ext_resource type="Script" uid="uid://criv87esy1oap" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural_crisis_stealth.gd" id="1_75eyt"]
 [ext_resource type="Script" uid="uid://b4grlj70m132a" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/neural_crisis_stealth_game_logic.gd" id="1_fs2eh"]
 [ext_resource type="TileSet" uid="uid://fnjijgyxu0fr" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/neural-crisis_stealth2.tres" id="2_5dbtc"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="3_bvm3m"]
@@ -10,9 +11,9 @@
 [ext_resource type="AudioStream" uid="uid://cwxuu2x24r6b7" path="res://Sprites/sonidos/hey-42237 (1).mp3" id="9_nnjf3"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="9_v0n5i"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="10_tbnoi"]
-[ext_resource type="Resource" uid="uid://dpv4wurvaamhb" path="res://scenes/quests/story_quests/template/1_template_stealth/template_stealth_components/template_collected.dialogue" id="11_f7iof"]
 [ext_resource type="SpriteFrames" uid="uid://cvckqgj4yftbt" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_dron.tres" id="11_lo7v5"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="12_bs0vj"]
+[ext_resource type="Resource" uid="uid://dcibg2wpnbed1" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/neural-crisis_collected.dialogue" id="12_lo7v5"]
 [ext_resource type="AudioStream" uid="uid://cibtgkbykfptw" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/minijuego1.mp3" id="16_5dbtc"]
 [ext_resource type="PackedScene" uid="uid://dua6mynlw2ptw" path="res://scenes/game_elements/props/checkpoint/checkpoint.tscn" id="17_3ykxo"]
 [ext_resource type="Texture2D" uid="uid://yf3ck21yseei" path="res://Sprites/minijuego 1/pared.png" id="18_3ykxo"]
@@ -91,9 +92,51 @@ point_count = 9
 
 [sub_resource type="Curve2D" id="Curve2D_cr3ht"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, -1628, 0, 0, 0, 0, -794, -1628)
+"points": PackedVector2Array(0, 0, 0, 0, 20, 21, 0, 0, 0, 0, 5, -1628, 0, 0, 0, 0, -794, -1628)
 }
 point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_qnlny"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -15, -1178, 0, 0, 0, 0, -821, -1180)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_op8sw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -16, -1007, 0, 0, 0, 0, -856, 651)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_s13c7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -840, 0, 0, 0, 0, -819, -782, 0, 0, 0, 0, -786, 501)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_icrg3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0, 0, 0, 12, 730, 0, 0, 0, 0, 810, 663)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_wkyj2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0, 0, 0, 2, -1000, 0, 0, 0, 0, 813, -1004)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_g7w0u"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0, 0, 0, 575, 25, 0, 0, 0, 0, 11, -1604)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_0n3as"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, -12, 0, 0, 0, 0, -826, -2, 0, 0, 0, 0, -852, -1635)
+}
+point_count = 4
 
 [sub_resource type="Resource" id="Resource_idy4y"]
 script = ExtResource("10_tbnoi")
@@ -106,6 +149,7 @@ size = Vector2(108.724, 95.2608)
 
 [node name="StealthTemplateLevel" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_75eyt")
 
 [node name="StealthGameLogic" type="Node" parent="." node_paths=PackedStringArray("map_layer")]
 script = ExtResource("1_fs2eh")
@@ -125,7 +169,7 @@ tile_map_data = PackedByteArray("AAABAAAAAwAHAAIAADABAAEAAwAHAAEAADABAAIAAwAHAAA
 tile_set = ExtResource("2_5dbtc")
 
 [node name="Player" parent="." instance=ExtResource("3_bvm3m")]
-position = Vector2(207, 159)
+position = Vector2(2175, 198)
 scale = Vector2(0.21, 0.21)
 sprite_frames = ExtResource("6_cpfs4")
 
@@ -474,8 +518,8 @@ detection_area_scale = 1.6
 scale = Vector2(1.6, 1.6)
 
 [node name="Light" parent="EnemyGuards/Guard8/DetectionArea" index="0"]
-position = Vector2(-6.25038, 18.1241)
-scale = Vector2(1.70724, 1.67088)
+position = Vector2(31.065, 18.1241)
+scale = Vector2(1.8914, 1.67088)
 
 [node name="CollisionPolygon2D" parent="EnemyGuards/Guard8/DetectionArea" index="1"]
 position = Vector2(-318.75, -644.376)
@@ -502,6 +546,7 @@ stream = ExtResource("9_nnjf3")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard8/Sounds" index="3"]
 stream = ExtResource("9_nnjf3")
+volume_db = 16.667
 
 [node name="Guard8-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(1458, 1151)
@@ -619,6 +664,9 @@ patrol_path = NodePath("../Guard11-PatrolPath")
 move_speed = 500.0
 detection_area_scale = 1.6
 
+[node name="SightRayCast" parent="EnemyGuards/Guard11" index="1"]
+collision_mask = 24
+
 [node name="DetectionArea" parent="EnemyGuards/Guard11" index="3"]
 scale = Vector2(1.6, 1.6)
 
@@ -634,7 +682,7 @@ one_way_collision_margin = 0.0
 [node name="AnimatedSprite2D" parent="EnemyGuards/Guard11" index="4"]
 position = Vector2(19.9997, -20)
 scale = Vector2(0.527344, 0.721876)
-sprite_frames = ExtResource("11_lo7v5")
+sprite_frames = ExtResource("8_tp4pg")
 animation = &"walk"
 
 [node name="CollisionShape2D" parent="EnemyGuards/Guard11" index="5"]
@@ -659,7 +707,7 @@ position = Vector2(1815, 1632)
 curve = SubResource("Curve2D_4qygq")
 
 [node name="Guard12" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("6_fg25g")]
-position = Vector2(3704, 1752)
+position = Vector2(3724, 1773)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("11_lo7v5")
 alerted_sound_stream = ExtResource("9_nnjf3")
@@ -668,6 +716,9 @@ patrol_path = NodePath("../Guard12-PatrolPath")
 wait_time = 0.3
 move_speed = 300.0
 detection_area_scale = 1.6
+
+[node name="SightRayCast" parent="EnemyGuards/Guard12" index="1"]
+collision_mask = 24
 
 [node name="DetectionArea" parent="EnemyGuards/Guard12" index="3"]
 scale = Vector2(1.6, 1.6)
@@ -708,6 +759,377 @@ stream = ExtResource("9_nnjf3")
 position = Vector2(3704, 1752)
 curve = SubResource("Curve2D_cr3ht")
 
+[node name="Guard13" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("6_fg25g")]
+position = Vector2(3726, 1322)
+scale = Vector2(0.1, 0.1)
+sprite_frames = ExtResource("11_lo7v5")
+alerted_sound_stream = ExtResource("9_nnjf3")
+alert_others_sound_stream = ExtResource("9_nnjf3")
+patrol_path = NodePath("../Guard13-PatrolPath")
+wait_time = 0.3
+move_speed = 300.0
+detection_area_scale = 1.6
+
+[node name="SightRayCast" parent="EnemyGuards/Guard13" index="1"]
+collision_mask = 24
+
+[node name="DetectionArea" parent="EnemyGuards/Guard13" index="3"]
+scale = Vector2(1.6, 1.6)
+
+[node name="Light" parent="EnemyGuards/Guard13/DetectionArea" index="0"]
+position = Vector2(-6.25038, 18.1241)
+scale = Vector2(1.70724, 1.67088)
+
+[node name="CollisionPolygon2D" parent="EnemyGuards/Guard13/DetectionArea" index="1"]
+position = Vector2(-318.75, -644.376)
+scale = Vector2(5.12962, 5.4639)
+one_way_collision_margin = 0.0
+
+[node name="AnimatedSprite2D" parent="EnemyGuards/Guard13" index="4"]
+position = Vector2(19.9997, -20)
+scale = Vector2(0.527344, 0.721876)
+sprite_frames = ExtResource("11_lo7v5")
+animation = &"walk"
+
+[node name="CollisionShape2D" parent="EnemyGuards/Guard13" index="5"]
+scale = Vector2(7.4788, 8.21135)
+
+[node name="PlayerAwareness" parent="EnemyGuards/Guard13" index="6"]
+visible = true
+offset_left = -60.0005
+offset_top = -730.0
+offset_right = 63.9995
+offset_bottom = -606.0
+scale = Vector2(1.98901, 2.31076)
+
+[node name="AlertSound" parent="EnemyGuards/Guard13/Sounds" index="0"]
+stream = ExtResource("9_nnjf3")
+
+[node name="TorchHitSound" parent="EnemyGuards/Guard13/Sounds" index="3"]
+stream = ExtResource("9_nnjf3")
+
+[node name="Guard13-PatrolPath" type="Path2D" parent="EnemyGuards"]
+position = Vector2(3726, 1322)
+curve = SubResource("Curve2D_qnlny")
+
+[node name="Guard14" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("6_fg25g")]
+position = Vector2(3727, 1142)
+scale = Vector2(0.1, 0.1)
+sprite_frames = ExtResource("11_lo7v5")
+alerted_sound_stream = ExtResource("9_nnjf3")
+alert_others_sound_stream = ExtResource("9_nnjf3")
+patrol_path = NodePath("../Guard14-PatrolPath")
+wait_time = 0.3
+move_speed = 300.0
+detection_area_scale = 1.6
+
+[node name="SightRayCast" parent="EnemyGuards/Guard14" index="1"]
+collision_mask = 24
+
+[node name="DetectionArea" parent="EnemyGuards/Guard14" index="3"]
+scale = Vector2(1.6, 1.6)
+
+[node name="Light" parent="EnemyGuards/Guard14/DetectionArea" index="0"]
+position = Vector2(-6.25038, 18.1241)
+scale = Vector2(1.70724, 1.67088)
+
+[node name="CollisionPolygon2D" parent="EnemyGuards/Guard14/DetectionArea" index="1"]
+position = Vector2(-318.75, -644.376)
+scale = Vector2(5.12962, 5.4639)
+one_way_collision_margin = 0.0
+
+[node name="AnimatedSprite2D" parent="EnemyGuards/Guard14" index="4"]
+position = Vector2(19.9997, -20)
+scale = Vector2(0.527344, 0.721876)
+sprite_frames = ExtResource("11_lo7v5")
+animation = &"walk"
+
+[node name="CollisionShape2D" parent="EnemyGuards/Guard14" index="5"]
+scale = Vector2(7.4788, 8.21135)
+
+[node name="PlayerAwareness" parent="EnemyGuards/Guard14" index="6"]
+visible = true
+offset_left = -60.0005
+offset_top = -730.0
+offset_right = 63.9995
+offset_bottom = -606.0
+scale = Vector2(1.98901, 2.31076)
+
+[node name="AlertSound" parent="EnemyGuards/Guard14/Sounds" index="0"]
+stream = ExtResource("9_nnjf3")
+
+[node name="TorchHitSound" parent="EnemyGuards/Guard14/Sounds" index="3"]
+stream = ExtResource("9_nnjf3")
+
+[node name="Guard14-PatrolPath" type="Path2D" parent="EnemyGuards"]
+position = Vector2(3727, 1142)
+curve = SubResource("Curve2D_op8sw")
+
+[node name="Guard15" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("6_fg25g")]
+position = Vector2(3724, 954)
+scale = Vector2(0.1, 0.1)
+sprite_frames = ExtResource("11_lo7v5")
+alerted_sound_stream = ExtResource("9_nnjf3")
+alert_others_sound_stream = ExtResource("9_nnjf3")
+patrol_path = NodePath("../Guard15-PatrolPath")
+wait_time = 0.3
+move_speed = 300.0
+detection_area_scale = 1.6
+
+[node name="SightRayCast" parent="EnemyGuards/Guard15" index="1"]
+collision_mask = 24
+
+[node name="DetectionArea" parent="EnemyGuards/Guard15" index="3"]
+scale = Vector2(1.6, 1.6)
+
+[node name="Light" parent="EnemyGuards/Guard15/DetectionArea" index="0"]
+position = Vector2(-6.25038, 18.1241)
+scale = Vector2(1.70724, 1.67088)
+
+[node name="CollisionPolygon2D" parent="EnemyGuards/Guard15/DetectionArea" index="1"]
+position = Vector2(-318.75, -644.376)
+scale = Vector2(5.12962, 5.4639)
+one_way_collision_margin = 0.0
+
+[node name="AnimatedSprite2D" parent="EnemyGuards/Guard15" index="4"]
+position = Vector2(19.9997, -20)
+scale = Vector2(0.527344, 0.721876)
+sprite_frames = ExtResource("11_lo7v5")
+animation = &"walk"
+
+[node name="CollisionShape2D" parent="EnemyGuards/Guard15" index="5"]
+scale = Vector2(7.4788, 8.21135)
+
+[node name="PlayerAwareness" parent="EnemyGuards/Guard15" index="6"]
+visible = true
+offset_left = -60.0005
+offset_top = -730.0
+offset_right = 63.9995
+offset_bottom = -606.0
+scale = Vector2(1.98901, 2.31076)
+
+[node name="AlertSound" parent="EnemyGuards/Guard15/Sounds" index="0"]
+stream = ExtResource("9_nnjf3")
+
+[node name="TorchHitSound" parent="EnemyGuards/Guard15/Sounds" index="3"]
+stream = ExtResource("9_nnjf3")
+
+[node name="Guard15-PatrolPath" type="Path2D" parent="EnemyGuards"]
+position = Vector2(3724, 954)
+curve = SubResource("Curve2D_s13c7")
+
+[node name="Guard16" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("6_fg25g")]
+position = Vector2(2905, 963)
+scale = Vector2(0.1, 0.1)
+sprite_frames = ExtResource("11_lo7v5")
+alerted_sound_stream = ExtResource("9_nnjf3")
+alert_others_sound_stream = ExtResource("9_nnjf3")
+patrol_path = NodePath("../Guard16-PatrolPath")
+wait_time = 0.3
+move_speed = 300.0
+detection_area_scale = 1.6
+
+[node name="SightRayCast" parent="EnemyGuards/Guard16" index="1"]
+collision_mask = 24
+
+[node name="DetectionArea" parent="EnemyGuards/Guard16" index="3"]
+scale = Vector2(1.6, 1.6)
+
+[node name="Light" parent="EnemyGuards/Guard16/DetectionArea" index="0"]
+position = Vector2(-6.25038, 18.1241)
+scale = Vector2(1.70724, 1.67088)
+
+[node name="CollisionPolygon2D" parent="EnemyGuards/Guard16/DetectionArea" index="1"]
+position = Vector2(-318.75, -644.376)
+scale = Vector2(5.12962, 5.4639)
+one_way_collision_margin = 0.0
+
+[node name="AnimatedSprite2D" parent="EnemyGuards/Guard16" index="4"]
+position = Vector2(19.9997, -20)
+scale = Vector2(0.527344, 0.721876)
+sprite_frames = ExtResource("11_lo7v5")
+animation = &"walk"
+
+[node name="CollisionShape2D" parent="EnemyGuards/Guard16" index="5"]
+scale = Vector2(7.4788, 8.21135)
+
+[node name="PlayerAwareness" parent="EnemyGuards/Guard16" index="6"]
+visible = true
+offset_left = -60.0005
+offset_top = -730.0
+offset_right = 63.9995
+offset_bottom = -606.0
+scale = Vector2(1.98901, 2.31076)
+
+[node name="AlertSound" parent="EnemyGuards/Guard16/Sounds" index="0"]
+stream = ExtResource("9_nnjf3")
+
+[node name="TorchHitSound" parent="EnemyGuards/Guard16/Sounds" index="3"]
+stream = ExtResource("9_nnjf3")
+
+[node name="Guard16-PatrolPath" type="Path2D" parent="EnemyGuards"]
+position = Vector2(2905, 963)
+curve = SubResource("Curve2D_icrg3")
+
+[node name="Guard17" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("6_fg25g")]
+position = Vector2(2911, 1164)
+scale = Vector2(0.1, 0.1)
+sprite_frames = ExtResource("11_lo7v5")
+alerted_sound_stream = ExtResource("9_nnjf3")
+alert_others_sound_stream = ExtResource("9_nnjf3")
+patrol_path = NodePath("../Guard17-PatrolPath")
+wait_time = 0.3
+move_speed = 300.0
+detection_area_scale = 1.6
+
+[node name="SightRayCast" parent="EnemyGuards/Guard17" index="1"]
+collision_mask = 24
+
+[node name="DetectionArea" parent="EnemyGuards/Guard17" index="3"]
+scale = Vector2(1.6, 1.6)
+
+[node name="Light" parent="EnemyGuards/Guard17/DetectionArea" index="0"]
+position = Vector2(-6.25038, 18.1241)
+scale = Vector2(1.70724, 1.67088)
+
+[node name="CollisionPolygon2D" parent="EnemyGuards/Guard17/DetectionArea" index="1"]
+position = Vector2(-318.75, -644.376)
+scale = Vector2(5.12962, 5.4639)
+one_way_collision_margin = 0.0
+
+[node name="AnimatedSprite2D" parent="EnemyGuards/Guard17" index="4"]
+position = Vector2(19.9997, -20)
+scale = Vector2(0.527344, 0.721876)
+sprite_frames = ExtResource("11_lo7v5")
+animation = &"walk"
+
+[node name="CollisionShape2D" parent="EnemyGuards/Guard17" index="5"]
+scale = Vector2(7.4788, 8.21135)
+
+[node name="PlayerAwareness" parent="EnemyGuards/Guard17" index="6"]
+visible = true
+offset_left = -60.0005
+offset_top = -730.0
+offset_right = 63.9995
+offset_bottom = -606.0
+scale = Vector2(1.98901, 2.31076)
+
+[node name="AlertSound" parent="EnemyGuards/Guard17/Sounds" index="0"]
+stream = ExtResource("9_nnjf3")
+
+[node name="TorchHitSound" parent="EnemyGuards/Guard17/Sounds" index="3"]
+stream = ExtResource("9_nnjf3")
+
+[node name="Guard17-PatrolPath" type="Path2D" parent="EnemyGuards"]
+position = Vector2(2911, 1164)
+curve = SubResource("Curve2D_wkyj2")
+
+[node name="Guard18" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("6_fg25g")]
+position = Vector2(3140, 1751)
+scale = Vector2(0.1, 0.1)
+sprite_frames = ExtResource("11_lo7v5")
+alerted_sound_stream = ExtResource("9_nnjf3")
+alert_others_sound_stream = ExtResource("9_nnjf3")
+patrol_path = NodePath("../Guard18-PatrolPath")
+wait_time = 0.3
+move_speed = 300.0
+detection_area_scale = 1.6
+
+[node name="SightRayCast" parent="EnemyGuards/Guard18" index="1"]
+collision_mask = 24
+
+[node name="DetectionArea" parent="EnemyGuards/Guard18" index="3"]
+scale = Vector2(1.6, 1.6)
+
+[node name="Light" parent="EnemyGuards/Guard18/DetectionArea" index="0"]
+position = Vector2(-6.25038, 18.1241)
+scale = Vector2(1.70724, 1.67088)
+
+[node name="CollisionPolygon2D" parent="EnemyGuards/Guard18/DetectionArea" index="1"]
+position = Vector2(-318.75, -644.376)
+scale = Vector2(5.12962, 5.4639)
+one_way_collision_margin = 0.0
+
+[node name="AnimatedSprite2D" parent="EnemyGuards/Guard18" index="4"]
+position = Vector2(19.9997, -20)
+scale = Vector2(0.527344, 0.721876)
+sprite_frames = ExtResource("11_lo7v5")
+animation = &"walk"
+
+[node name="CollisionShape2D" parent="EnemyGuards/Guard18" index="5"]
+scale = Vector2(7.4788, 8.21135)
+
+[node name="PlayerAwareness" parent="EnemyGuards/Guard18" index="6"]
+visible = true
+offset_left = -60.0005
+offset_top = -730.0
+offset_right = 63.9995
+offset_bottom = -606.0
+scale = Vector2(1.98901, 2.31076)
+
+[node name="AlertSound" parent="EnemyGuards/Guard18/Sounds" index="0"]
+stream = ExtResource("9_nnjf3")
+
+[node name="TorchHitSound" parent="EnemyGuards/Guard18/Sounds" index="3"]
+stream = ExtResource("9_nnjf3")
+
+[node name="Guard18-PatrolPath" type="Path2D" parent="EnemyGuards"]
+position = Vector2(3140, 1751)
+curve = SubResource("Curve2D_g7w0u")
+
+[node name="Guard19" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("6_fg25g")]
+position = Vector2(3727, 1767)
+scale = Vector2(0.1, 0.1)
+sprite_frames = ExtResource("11_lo7v5")
+alerted_sound_stream = ExtResource("9_nnjf3")
+alert_others_sound_stream = ExtResource("9_nnjf3")
+patrol_path = NodePath("../Guard19-PatrolPath")
+wait_time = 0.3
+move_speed = 300.0
+detection_area_scale = 1.6
+
+[node name="SightRayCast" parent="EnemyGuards/Guard19" index="1"]
+collision_mask = 24
+
+[node name="DetectionArea" parent="EnemyGuards/Guard19" index="3"]
+scale = Vector2(1.6, 1.6)
+
+[node name="Light" parent="EnemyGuards/Guard19/DetectionArea" index="0"]
+position = Vector2(-6.25038, 18.1241)
+scale = Vector2(1.70724, 1.67088)
+
+[node name="CollisionPolygon2D" parent="EnemyGuards/Guard19/DetectionArea" index="1"]
+position = Vector2(-318.75, -644.376)
+scale = Vector2(5.12962, 5.4639)
+one_way_collision_margin = 0.0
+
+[node name="AnimatedSprite2D" parent="EnemyGuards/Guard19" index="4"]
+position = Vector2(19.9997, -20)
+scale = Vector2(0.527344, 0.721876)
+sprite_frames = ExtResource("11_lo7v5")
+animation = &"walk"
+
+[node name="CollisionShape2D" parent="EnemyGuards/Guard19" index="5"]
+scale = Vector2(7.4788, 8.21135)
+
+[node name="PlayerAwareness" parent="EnemyGuards/Guard19" index="6"]
+visible = true
+offset_left = -60.0005
+offset_top = -730.0
+offset_right = 63.9995
+offset_bottom = -606.0
+scale = Vector2(1.98901, 2.31076)
+
+[node name="AlertSound" parent="EnemyGuards/Guard19/Sounds" index="0"]
+stream = ExtResource("9_nnjf3")
+
+[node name="TorchHitSound" parent="EnemyGuards/Guard19/Sounds" index="3"]
+stream = ExtResource("9_nnjf3")
+
+[node name="Guard19-PatrolPath" type="Path2D" parent="EnemyGuards"]
+position = Vector2(3727, 1767)
+curve = SubResource("Curve2D_0n3as")
+
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
 visible = false
 
@@ -715,9 +1137,9 @@ visible = false
 
 [node name="CollectibleItem" parent="." instance=ExtResource("9_v0n5i")]
 position = Vector2(2362, 934)
-next_scene = "uid://thwcu5akkqp5"
+next_scene = "uid://dcdnhyco3l62e"
 item = SubResource("Resource_idy4y")
-collected_dialogue = ExtResource("11_f7iof")
+collected_dialogue = ExtResource("12_lo7v5")
 
 [node name="Cinematic" type="Node2D" parent="."]
 rotation = -0.113446
@@ -726,7 +1148,9 @@ script = ExtResource("12_bs0vj")
 dialogue = ExtResource("19_fs2eh")
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("16_5dbtc")
 volume_db = -15.036
 autoplay = true
@@ -1649,7 +2073,7 @@ texture = ExtResource("18_3ykxo")
 
 [node name="Checkpoints" type="Node2D" parent="."]
 y_sort_enabled = true
-position = Vector2(178, 373)
+position = Vector2(199, 392)
 
 [node name="Checkpoint" parent="Checkpoints" instance=ExtResource("17_3ykxo")]
 position = Vector2(1709, 451)
@@ -1682,4 +2106,11 @@ debug_color = Color(0, 0, 0, 0.42)
 [editable path="EnemyGuards/Guard10"]
 [editable path="EnemyGuards/Guard11"]
 [editable path="EnemyGuards/Guard12"]
+[editable path="EnemyGuards/Guard13"]
+[editable path="EnemyGuards/Guard14"]
+[editable path="EnemyGuards/Guard15"]
+[editable path="EnemyGuards/Guard16"]
+[editable path="EnemyGuards/Guard17"]
+[editable path="EnemyGuards/Guard18"]
+[editable path="EnemyGuards/Guard19"]
 [editable path="Checkpoints/Checkpoint"]
