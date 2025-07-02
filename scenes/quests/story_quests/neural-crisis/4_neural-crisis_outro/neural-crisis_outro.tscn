@@ -1,0 +1,279 @@
+[gd_scene load_steps=26 format=4 uid="uid://dcdnhyco3l62e"]
+
+[ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="1_ueyv5"]
+[ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="2_3qdo7"]
+[ext_resource type="Texture2D" uid="uid://c5f5nrrd6nbk8" path="res://Sprites/Día y noche/Layer 1_sprite_1.png" id="3_5bu3f"]
+[ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_74eu1"]
+[ext_resource type="Texture2D" uid="uid://pw2n7acgo320" path="res://Sprites/edificios/Layer 1_sprite_3.png" id="4_jbsf5"]
+[ext_resource type="SpriteFrames" uid="uid://d4ec3w2k3b3up" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_player.tres" id="4_nqu0d"]
+[ext_resource type="Texture2D" uid="uid://caarrfq4ju4vb" path="res://Sprites/edificios/Layer 1_sprite_5.png" id="5_3qqug"]
+[ext_resource type="Resource" uid="uid://sbdbrunxjxyo" path="res://scenes/quests/story_quests/neural-crisis/4_neural-crisis_outro/neural-crisis_outro_components/neural-crisis_outro.dialogue" id="5_c7r81"]
+[ext_resource type="Texture2D" uid="uid://di18kdb7yg0ng" path="res://Sprites/sigma_9_v1/New Piskel.png" id="6_q0cqs"]
+[ext_resource type="Texture2D" uid="uid://co2b6cc5ny80g" path="res://Sprites/edificios/Layer 1_sprite_4.png" id="6_sq85i"]
+[ext_resource type="Texture2D" uid="uid://b40acl0evk6s5" path="res://Sprites/edificios/Layer 1_sprite_6.png" id="7_0vfus"]
+[ext_resource type="Texture2D" uid="uid://byhrky0rbdks7" path="res://Sprites/humosl/humoooo05.png" id="14_05032"]
+[ext_resource type="Texture2D" uid="uid://bscgychy2xauj" path="res://Sprites/humosl/humoooo06.png" id="15_uw3it"]
+[ext_resource type="Texture2D" uid="uid://cbu2rpw0qv3jw" path="res://Sprites/humosl/humoooo07.png" id="16_mgd0g"]
+[ext_resource type="SpriteFrames" uid="uid://yl6d7iqqxsb7" path="res://scenes/quests/story_quests/neural-crisis/4_neural-crisis_outro/neural-crisis_outro_components/neural-crisis_IAsuprema.tres" id="17_j7ryi"]
+[ext_resource type="Texture2D" uid="uid://bxopr8f8kr2dc" path="res://Sprites/humosl/humoooo08.png" id="17_s4iqp"]
+[ext_resource type="SpriteFrames" uid="uid://7n6qmj6a82v3" path="res://scenes/quests/story_quests/neural-crisis/4_neural-crisis_outro/neural-crisis_outro_components/neural-crisis_humo.tres" id="18_gn5pw"]
+[ext_resource type="Texture2D" uid="uid://bpp5tq4sx0pmu" path="res://Sprites/humosl/humoooo09.png" id="18_v8jhd"]
+[ext_resource type="AudioStream" uid="uid://cibtgkbykfptw" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/minijuego1.mp3" id="28_3uyt1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n037h"]
+atlas = ExtResource("6_q0cqs")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c85kf"]
+atlas = ExtResource("6_q0cqs")
+region = Rect2(0, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isbcq"]
+atlas = ExtResource("6_q0cqs")
+region = Rect2(0, 2048, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pji1x"]
+atlas = ExtResource("6_q0cqs")
+region = Rect2(0, 3072, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5m7aj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n037h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c85kf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isbcq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pji1x")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s8hlh"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"ataque",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_05032")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uw3it")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mgd0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_s4iqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_v8jhd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Outro" type="Node2D"]
+texture_filter = 1
+scale = Vector2(1.20456, 1.12492)
+
+[node name="HUD" parent="." instance=ExtResource("1_ueyv5")]
+
+[node name="TileMapLayers" type="Node2D" parent="."]
+
+[node name="Ground" type="TileMapLayer" parent="TileMapLayers"]
+tile_map_data = PackedByteArray("AAAAAAUAAQAGAAMAAAABAAUAAQAGAAMAAAACAAUAAQAGAAMAAAADAAUAAQAGAAMAAAAEAAUAAQAGAAMAAAAFAAUAAQAGAAMAAAAGAAUAAQAGAAMAAAAHAAUAAQAGAAMAAAAIAAUAAQAGAAMAAAAJAAUAAQAGAAMAAAAKAAUAAQAGAAMAAAALAAUAAQAGAAMAAAAMAAUAAQAGAAMAAAANAAUAAQAGAAMAAAAOAAUAAQAGAAMAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAEAAAABAAYAAQABAAAAAAABAAcAAQABAAEAAAACAAYAAQABAAAAAAACAAcAAQABAAEAAAADAAYAAQABAAAAAAADAAcAAQABAAEAAAAEAAYAAQABAAAAAAAEAAcAAQABAAEAAAAFAAYAAQABAAAAAAAFAAcAAQABAAEAAAAGAAYAAQABAAAAAAAGAAcAAQABAAEAAAAHAAYAAQABAAAAAAAHAAcAAQABAAEAAAAIAAYAAQABAAAAAAAIAAcAAQABAAEAAAAJAAYAAQABAAAAAAAJAAcAAQABAAEAAAAKAAYAAQABAAAAAAAKAAcAAQABAAEAAAALAAYAAQABAAAAAAALAAcAAQABAAEAAAAMAAYAAQABAAAAAAAMAAcAAQABAAEAAAANAAYAAQABAAAAAAANAAcAAQABAAEAAAAOAAYAAQACAAAAAAAOAAcAAQACAAEAAAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAABAAEAAQABAAEAAAACAAEAAQABAAEAAAADAAEAAQABAAEAAAADAAIAAQABAAEAAAAEAAIAAQABAAEAAAAFAAIAAQABAAEAAAAFAAMAAQABAAEAAAABAAAAAQABAAAAAAABAAIAAQABAAEAAAAAAAIAAQAAAAEAAAAAAAMAAQAAAAEAAAAAAAQAAQAAAAIAAAABAAMAAQABAAEAAAABAAQAAQABAAIAAAACAAQAAQABAAIAAAACAAMAAQABAAEAAAACAAIAAQABAAEAAAADAAQAAQABAAIAAAADAAMAAQABAAEAAAAEAAMAAQABAAEAAAAEAAQAAQABAAIAAAAFAAQAAQABAAIAAAAGAAQAAQABAAIAAAAHAAQAAQABAAIAAAAIAAQAAQABAAIAAAAJAAQAAQABAAIAAAAKAAQAAQABAAIAAAALAAQAAQABAAIAAAAMAAQAAQABAAIAAAANAAQAAQABAAIAAAAOAAQAAQACAAIAAAAOAAMAAQACAAEAAAAOAAIAAQACAAEAAAAOAAEAAQACAAEAAAAOAAAAAQACAAAAAAANAAAAAQABAAAAAAAMAAAAAQABAAAAAAALAAAAAQABAAAAAAAKAAAAAQABAAAAAAAJAAAAAQABAAAAAAAIAAAAAQABAAAAAAAHAAAAAQABAAAAAAAGAAAAAQABAAAAAAAFAAAAAQABAAAAAAAEAAAAAQABAAAAAAACAAAAAQABAAAAAAADAAAAAQABAAAAAAAEAAEAAQABAAEAAAAFAAEAAQABAAEAAAAGAAEAAQABAAEAAAAHAAEAAQABAAEAAAAIAAEAAQABAAEAAAAJAAEAAQABAAEAAAAKAAEAAQABAAEAAAALAAEAAQABAAEAAAAMAAEAAQABAAEAAAANAAEAAQABAAEAAAANAAIAAQABAAEAAAANAAMAAQABAAEAAAAMAAMAAQABAAEAAAALAAMAAQABAAEAAAAKAAMAAQABAAEAAAAJAAMAAQABAAEAAAAIAAMAAQABAAEAAAAHAAMAAQABAAEAAAAGAAMAAQABAAEAAAAGAAIAAQABAAEAAAAHAAIAAQABAAEAAAAIAAIAAQABAAEAAAAJAAIAAQABAAEAAAAKAAIAAQABAAEAAAALAAIAAQABAAEAAAAMAAIAAQABAAEAAAAAAAgAAQAAAAIAAAABAAgAAQABAAIAAAACAAgAAQABAAIAAAADAAgAAQABAAIAAAAEAAgAAQABAAIAAAAFAAgAAQABAAIAAAAGAAgAAQABAAIAAAAHAAgAAQABAAIAAAAIAAgAAQABAAIAAAAJAAgAAQABAAIAAAAKAAgAAQABAAIAAAALAAgAAQABAAIAAAAMAAgAAQABAAIAAAANAAgAAQABAAIAAAAOAAgAAQACAAIAAAA=")
+tile_set = ExtResource("2_3qdo7")
+metadata/_edit_lock_ = true
+
+[node name="Sand" type="TileMapLayer" parent="TileMapLayers"]
+position = Vector2(-163, 34)
+tile_map_data = PackedByteArray("AAANAAEABgACAAAAAAANAAIABgADAAEAAAANAAMABgADAAEAAAANAAQABgADAAEAAAALAAEABgABAAMAAAALAAUABgABAAMAAAAMAAEABgABAAMAAAAMAAUABgABAAMAAAANAAUABgACAAIAAAAKAAEABgABAAMAAAAJAAEABgABAAMAAAAIAAEABgABAAMAAAAHAAEABgAAAAAAAAAHAAIABgADAAEAAAAHAAMABgADAAEAAAAHAAQABgADAAEAAAAHAAUABgAAAAIAAAAIAAUABgABAAMAAAAJAAUABgABAAMAAAAKAAUABgABAAMAAAA=")
+tile_set = ExtResource("2_3qdo7")
+
+[node name="Amanecer" type="Sprite2D" parent="TileMapLayers"]
+modulate = Color(0.277528, 0.277528, 0.277528, 1)
+position = Vector2(481.375, 289)
+scale = Vector2(0.46936, 0.564453)
+texture = ExtResource("3_5bu3f")
+
+[node name="edificios" type="Sprite2D" parent="TileMapLayers"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(480.675, 304.023)
+scale = Vector2(0.460205, 0.524414)
+texture = ExtResource("4_jbsf5")
+
+[node name="adeanteedficios" type="Sprite2D" parent="TileMapLayers"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(485.5, 269.5)
+scale = Vector2(0.462402, 0.514648)
+texture = ExtResource("5_3qqug")
+
+[node name="edificiosatras" type="Sprite2D" parent="TileMapLayers"]
+modulate = Color(0.147672, 0.147672, 0.147672, 1)
+position = Vector2(477, 270)
+scale = Vector2(0.466797, 0.525391)
+texture = ExtResource("6_sq85i")
+
+[node name="piso" type="Sprite2D" parent="TileMapLayers"]
+position = Vector2(478, 288)
+scale = Vector2(0.466797, 0.564453)
+texture = ExtResource("7_0vfus")
+
+[node name="Cinematic" type="Node2D" parent="TileMapLayers"]
+position = Vector2(516, 164)
+scale = Vector2(1.17299, inf_neg)
+script = ExtResource("4_74eu1")
+dialogue = ExtResource("5_c7r81")
+next_scene = "uid://cufkthb25mpxy"
+metadata/_custom_type_script = "uid://x1mxt6bmei2o"
+
+[node name="OnTheGround" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Character" type="AnimatedSprite2D" parent="OnTheGround"]
+position = Vector2(676.3, 460.687)
+scale = Vector2(0.17129, 0.177503)
+sprite_frames = ExtResource("4_nqu0d")
+animation = &"defeated"
+autoplay = "defeated"
+frame_progress = 0.415049
+
+[node name="Sigma9" type="AnimatedSprite2D" parent="OnTheGround"]
+position = Vector2(848.812, 268.938)
+scale = Vector2(0.0882568, 0.0916748)
+sprite_frames = SubResource("SpriteFrames_5m7aj")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Humoderecha" type="AnimatedSprite2D" parent="OnTheGround"]
+position = Vector2(57, 235)
+scale = Vector2(0.121719, 0.115546)
+sprite_frames = SubResource("SpriteFrames_s8hlh")
+animation = &"ataque"
+autoplay = "idle"
+
+[node name="Samurai" type="AnimatedSprite2D" parent="OnTheGround/Humoderecha"]
+position = Vector2(1470.6, 95.2005)
+scale = Vector2(1.18449, 1.20617)
+sprite_frames = SubResource("SpriteFrames_s8hlh")
+animation = &"idle"
+autoplay = "ataque"
+
+[node name="Samurai" type="AnimatedSprite2D" parent="OnTheGround/Humoderecha/Samurai"]
+position = Vector2(-457.777, 1234.14)
+scale = Vector2(1.18449, 1.20617)
+sprite_frames = SubResource("SpriteFrames_s8hlh")
+animation = &"idle"
+autoplay = "ataque"
+
+[node name="Samurai" type="AnimatedSprite2D" parent="OnTheGround/Humoderecha/Samurai/Samurai"]
+position = Vector2(1247.26, -1594.27)
+scale = Vector2(1.18449, 1.20617)
+sprite_frames = SubResource("SpriteFrames_s8hlh")
+animation = &"idle"
+autoplay = "ataque"
+
+[node name="Samurai" type="AnimatedSprite2D" parent="OnTheGround/Humoderecha/Samurai/Samurai/Samurai"]
+position = Vector2(1146.92, -128.23)
+scale = Vector2(1.18449, 1.20617)
+sprite_frames = SubResource("SpriteFrames_s8hlh")
+animation = &"idle"
+autoplay = "ataque"
+
+[node name="Samurai" type="AnimatedSprite2D" parent="OnTheGround/Humoderecha/Samurai/Samurai/Samurai/Samurai"]
+position = Vector2(475.793, 470.224)
+scale = Vector2(1.18449, 1.20617)
+sprite_frames = SubResource("SpriteFrames_s8hlh")
+animation = &"idle"
+autoplay = "ataque"
+
+[node name="Samurai" type="AnimatedSprite2D" parent="OnTheGround/Humoderecha/Samurai/Samurai/Samurai/Samurai/Samurai"]
+position = Vector2(496.822, 376.288)
+scale = Vector2(1.18449, 1.20617)
+sprite_frames = SubResource("SpriteFrames_s8hlh")
+animation = &"idle"
+autoplay = "ataque"
+
+[node name="Samurai" type="AnimatedSprite2D" parent="OnTheGround/Humoderecha/Samurai/Samurai/Samurai/Samurai/Samurai/Samurai"]
+position = Vector2(-2525.56, -545.241)
+scale = Vector2(1.18449, 1.20617)
+sprite_frames = SubResource("SpriteFrames_s8hlh")
+animation = &"idle"
+autoplay = "ataque"
+
+[node name="Samurai" type="AnimatedSprite2D" parent="OnTheGround/Humoderecha/Samurai/Samurai/Samurai/Samurai/Samurai/Samurai/Samurai"]
+position = Vector2(369.174, 132.816)
+scale = Vector2(1.18449, 1.20617)
+sprite_frames = SubResource("SpriteFrames_s8hlh")
+animation = &"idle"
+autoplay = "ataque"
+
+[node name="IA suprema" type="AnimatedSprite2D" parent="OnTheGround"]
+position = Vector2(482.336, 450.7)
+scale = Vector2(0.200815, 0.190317)
+sprite_frames = ExtResource("17_j7ryi")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Humoizquierda" type="AnimatedSprite2D" parent="OnTheGround"]
+position = Vector2(42, 242)
+scale = Vector2(0.141406, 0.15332)
+sprite_frames = ExtResource("18_gn5pw")
+autoplay = "default"
+
+[node name="Humoizquierda" type="AnimatedSprite2D" parent="OnTheGround/Humoizquierda"]
+position = Vector2(1124.42, -52.1783)
+scale = Vector2(0.661863, 0.581119)
+sprite_frames = ExtResource("18_gn5pw")
+
+[node name="Humoizquierda" type="AnimatedSprite2D" parent="OnTheGround/Humoizquierda/Humoizquierda"]
+position = Vector2(1430.66, 150.918)
+scale = Vector2(0.853143, 0.93729)
+sprite_frames = ExtResource("18_gn5pw")
+
+[node name="Humoizquierda" type="AnimatedSprite2D" parent="OnTheGround/Humoizquierda/Humoizquierda/Humoizquierda"]
+position = Vector2(1253.67, 856.826)
+scale = Vector2(1.38414, 1.16046)
+sprite_frames = ExtResource("18_gn5pw")
+
+[node name="Humoizquierda" type="AnimatedSprite2D" parent="OnTheGround/Humoizquierda/Humoizquierda/Humoizquierda/Humoizquierda"]
+position = Vector2(2370.61, -629.448)
+scale = Vector2(1.38414, 1.16046)
+sprite_frames = ExtResource("18_gn5pw")
+
+[node name="Humoizquierda" type="AnimatedSprite2D" parent="OnTheGround/Humoizquierda/Humoizquierda/Humoizquierda/Humoizquierda/Humoizquierda"]
+position = Vector2(947.864, 595.763)
+scale = Vector2(1.32534, 1.5389)
+sprite_frames = ExtResource("18_gn5pw")
+
+[node name="Humoizquierda" type="AnimatedSprite2D" parent="OnTheGround/Humoizquierda/Humoizquierda/Humoizquierda/Humoizquierda/Humoizquierda/Humoizquierda"]
+position = Vector2(-3141.88, -1115.18)
+scale = Vector2(1.32534, 1.5389)
+sprite_frames = ExtResource("18_gn5pw")
+
+[node name="Humoizquierda" type="AnimatedSprite2D" parent="OnTheGround/Humoizquierda/Humoizquierda/Humoizquierda/Humoizquierda/Humoizquierda/Humoizquierda/Humoizquierda"]
+position = Vector2(1741.68, -161.453)
+scale = Vector2(1.32534, 1.5389)
+sprite_frames = ExtResource("18_gn5pw")
+
+[node name="ScreenOverlay" type="CanvasLayer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_3uyt1")
+volume_db = -15.036
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(479.015, 288.911)
