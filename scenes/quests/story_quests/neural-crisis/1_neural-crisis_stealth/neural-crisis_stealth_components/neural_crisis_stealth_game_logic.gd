@@ -3,7 +3,7 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
 @tool
-class_name StealthGameLogic
+
 extends Node
 
 @export_range(0.5, 3.0, 0.1, "or_greater", "or_less") var zoom: float = 1.0:

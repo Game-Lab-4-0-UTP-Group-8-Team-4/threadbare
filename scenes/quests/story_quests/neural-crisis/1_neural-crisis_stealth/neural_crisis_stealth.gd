@@ -1,5 +1,4 @@
 extends Node2D
-# VERSIÓN COMPLETA (recomendada)
 
 # Referencia al AudioStreamPlayer
 @onready var music_player = $Music/AudioStreamPlayer
