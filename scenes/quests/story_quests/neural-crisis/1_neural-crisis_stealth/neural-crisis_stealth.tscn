@@ -153,7 +153,6 @@ script = ExtResource("1_75eyt")
 
 [node name="StealthGameLogic" type="Node" parent="." node_paths=PackedStringArray("map_layer")]
 script = ExtResource("1_fs2eh")
-zoom = 0.7
 map_layer = NodePath("../TileMapLayers/Prisión")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
