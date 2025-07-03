@@ -106,6 +106,8 @@ _data = {
 
 [node name="Intro" type="Node2D"]
 texture_filter = 1
+position = Vector2(-622, -39)
+scale = Vector2(1.6249, 1.72701)
 
 [node name="TileMapLayers" type="Node2D" parent="."]
 modulate = Color(0.617455, 0.617455, 0.617455, 1)
