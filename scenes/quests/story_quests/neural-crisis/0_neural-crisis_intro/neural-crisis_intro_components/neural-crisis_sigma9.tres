@@ -1,9 +1,9 @@
 [gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://7jj5h3dajwdl"]
 
-[ext_resource type="Texture2D" uid="uid://kqtoahlv2ix1" path="res://Sprites/sigma_9_v1/New Piskel (1).png" id="1_we5hr"]
-[ext_resource type="Texture2D" uid="uid://ciry0l8tyms3p" path="res://Sprites/sigma_9_v1/New Piskel (2).png" id="2_y87pp"]
-[ext_resource type="Texture2D" uid="uid://7e4yjgctoqmi" path="res://Sprites/sigma_9_v1/New Piskel (3).png" id="3_skam8"]
-[ext_resource type="Texture2D" uid="uid://c548kkapowcxd" path="res://Sprites/sigma_9_v1/New Piskel (4).png" id="4_7wdda"]
+[ext_resource type="Texture2D" uid="uid://kqtoahlv2ix1" path="res://scenes/quests/story_quests/neural-crisis/Sprites/sigma_9_v1/New Piskel (1).png" id="1_we5hr"]
+[ext_resource type="Texture2D" uid="uid://ciry0l8tyms3p" path="res://scenes/quests/story_quests/neural-crisis/Sprites/sigma_9_v1/New Piskel (2).png" id="2_y87pp"]
+[ext_resource type="Texture2D" uid="uid://7e4yjgctoqmi" path="res://scenes/quests/story_quests/neural-crisis/Sprites/sigma_9_v1/New Piskel (3).png" id="3_skam8"]
+[ext_resource type="Texture2D" uid="uid://c548kkapowcxd" path="res://scenes/quests/story_quests/neural-crisis/Sprites/sigma_9_v1/New Piskel (4).png" id="4_7wdda"]
 
 [resource]
 animations = [{

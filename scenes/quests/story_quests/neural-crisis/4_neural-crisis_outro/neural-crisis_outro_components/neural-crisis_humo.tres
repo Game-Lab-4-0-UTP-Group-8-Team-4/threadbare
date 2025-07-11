@@ -1,10 +1,10 @@
 [gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://7n6qmj6a82v3"]
 
-[ext_resource type="Texture2D" uid="uid://bj2ja3tl3kkv1" path="res://Sprites/humosl/humoooo00.png" id="1_ilgxr"]
-[ext_resource type="Texture2D" uid="uid://dvo56kfvx4b70" path="res://Sprites/humosl/humoooo01.png" id="2_7jqqa"]
-[ext_resource type="Texture2D" uid="uid://ct8qa7rxop8yb" path="res://Sprites/humosl/humoooo02.png" id="3_acwdi"]
-[ext_resource type="Texture2D" uid="uid://bxsyheamqkk1k" path="res://Sprites/humosl/humoooo03.png" id="4_pvjr5"]
-[ext_resource type="Texture2D" uid="uid://dcg5qojojm5nr" path="res://Sprites/humosl/humoooo04.png" id="5_eetr4"]
+[ext_resource type="Texture2D" uid="uid://bj2ja3tl3kkv1" path="res://scenes/quests/story_quests/neural-crisis/Sprites/humosl/humoooo00.png" id="1_ilgxr"]
+[ext_resource type="Texture2D" uid="uid://dvo56kfvx4b70" path="res://scenes/quests/story_quests/neural-crisis/Sprites/humosl/humoooo01.png" id="2_7jqqa"]
+[ext_resource type="Texture2D" uid="uid://ct8qa7rxop8yb" path="res://scenes/quests/story_quests/neural-crisis/Sprites/humosl/humoooo02.png" id="3_acwdi"]
+[ext_resource type="Texture2D" uid="uid://bxsyheamqkk1k" path="res://scenes/quests/story_quests/neural-crisis/Sprites/humosl/humoooo03.png" id="4_pvjr5"]
+[ext_resource type="Texture2D" uid="uid://dcg5qojojm5nr" path="res://scenes/quests/story_quests/neural-crisis/Sprites/humosl/humoooo04.png" id="5_eetr4"]
 
 [resource]
 animations = [{

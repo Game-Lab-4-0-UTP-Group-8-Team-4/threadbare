@@ -1,11 +1,11 @@
 [gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://yl6d7iqqxsb7"]
 
-[ext_resource type="Texture2D" uid="uid://c3ivj8rbrkg4h" path="res://Sprites/derrota/DERROTA0.png" id="1_bc04g"]
-[ext_resource type="Texture2D" uid="uid://0w8mgikku36s" path="res://Sprites/derrota/DERROTA1.png" id="2_h5doa"]
-[ext_resource type="Texture2D" uid="uid://qs4fhcmnnoh5" path="res://Sprites/derrota/DERROTA2.png" id="3_wydk5"]
-[ext_resource type="Texture2D" uid="uid://dq78hh20dl331" path="res://Sprites/derrota/DERROTA3.png" id="4_5vrtv"]
-[ext_resource type="Texture2D" uid="uid://dvvu2axxposkf" path="res://Sprites/derrota/DERROTA4.png" id="5_ethsw"]
-[ext_resource type="Texture2D" uid="uid://c26iywb3tr271" path="res://Sprites/derrota/DERROTA5.png" id="6_i6gni"]
+[ext_resource type="Texture2D" uid="uid://c3ivj8rbrkg4h" path="res://scenes/quests/story_quests/neural-crisis/Sprites/derrota/DERROTA0.png" id="1_bc04g"]
+[ext_resource type="Texture2D" uid="uid://0w8mgikku36s" path="res://scenes/quests/story_quests/neural-crisis/Sprites/derrota/DERROTA1.png" id="2_h5doa"]
+[ext_resource type="Texture2D" uid="uid://qs4fhcmnnoh5" path="res://scenes/quests/story_quests/neural-crisis/Sprites/derrota/DERROTA2.png" id="3_wydk5"]
+[ext_resource type="Texture2D" uid="uid://dq78hh20dl331" path="res://scenes/quests/story_quests/neural-crisis/Sprites/derrota/DERROTA3.png" id="4_5vrtv"]
+[ext_resource type="Texture2D" uid="uid://dvvu2axxposkf" path="res://scenes/quests/story_quests/neural-crisis/Sprites/derrota/DERROTA4.png" id="5_ethsw"]
+[ext_resource type="Texture2D" uid="uid://c26iywb3tr271" path="res://scenes/quests/story_quests/neural-crisis/Sprites/derrota/DERROTA5.png" id="6_i6gni"]
 
 [resource]
 animations = [{

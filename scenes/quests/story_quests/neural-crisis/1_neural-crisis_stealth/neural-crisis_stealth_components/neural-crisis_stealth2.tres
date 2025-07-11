@@ -1,12 +1,12 @@
 [gd_resource type="TileSet" load_steps=17 format=3 uid="uid://cl571bnnemuyl"]
 
-[ext_resource type="Texture2D" uid="uid://cr73ypncogqfa" path="res://Sprites/Untitled (1).png" id="1_aqq7e"]
-[ext_resource type="Texture2D" uid="uid://bywt8ve4ua52x" path="res://Sprites/e428a662a7b6f9e40a9e511ac97d7c0e.png" id="2_skily"]
-[ext_resource type="Texture2D" uid="uid://bqe1rw5ltd5tr" path="res://Sprites/make-4-pixel-art-tiles-for-your.png" id="3_ie4xg"]
-[ext_resource type="Texture2D" uid="uid://bwtxnv6h1bve2" path="res://Sprites/2LztA8.jpg" id="4_untdy"]
-[ext_resource type="Texture2D" uid="uid://yecpyw7punb0" path="res://Sprites/minijuego 1/sprite_0.png" id="5_ijjbg"]
-[ext_resource type="Texture2D" uid="uid://povt223ds8vg" path="res://Sprites/minijuego 1/lingote de oro.png" id="6_gmmpw"]
-[ext_resource type="Texture2D" uid="uid://csep4x31gxitq" path="res://Sprites/minijuego 1/pared de oro.png" id="7_ulpk1"]
+[ext_resource type="Texture2D" uid="uid://cr73ypncogqfa" path="res://scenes/quests/story_quests/neural-crisis/Sprites/Untitled (1).png" id="1_aqq7e"]
+[ext_resource type="Texture2D" uid="uid://bywt8ve4ua52x" path="res://scenes/quests/story_quests/neural-crisis/Sprites/e428a662a7b6f9e40a9e511ac97d7c0e.png" id="2_skily"]
+[ext_resource type="Texture2D" uid="uid://bqe1rw5ltd5tr" path="res://scenes/quests/story_quests/neural-crisis/Sprites/make-4-pixel-art-tiles-for-your.png" id="3_ie4xg"]
+[ext_resource type="Texture2D" uid="uid://bwtxnv6h1bve2" path="res://scenes/quests/story_quests/neural-crisis/Sprites/2LztA8.jpg" id="4_untdy"]
+[ext_resource type="Texture2D" uid="uid://yecpyw7punb0" path="res://scenes/quests/story_quests/neural-crisis/Sprites/minijuego 1/sprite_0.png" id="5_ijjbg"]
+[ext_resource type="Texture2D" uid="uid://povt223ds8vg" path="res://scenes/quests/story_quests/neural-crisis/Sprites/minijuego 1/lingote de oro.png" id="6_gmmpw"]
+[ext_resource type="Texture2D" uid="uid://csep4x31gxitq" path="res://scenes/quests/story_quests/neural-crisis/Sprites/minijuego 1/pared de oro.png" id="7_ulpk1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hx8g6"]
 texture = ExtResource("1_aqq7e")
