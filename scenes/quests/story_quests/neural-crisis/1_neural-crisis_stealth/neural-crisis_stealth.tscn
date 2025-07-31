@@ -6,16 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="3_bvm3m"]
 [ext_resource type="SpriteFrames" uid="uid://d4ec3w2k3b3up" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_player.tres" id="6_cpfs4"]
 [ext_resource type="PackedScene" uid="uid://d37mebu7atru7" path="res://scenes/game_elements/characters/enemies/guard/guard.tscn" id="6_fg25g"]
+[ext_resource type="AudioStream" uid="uid://ly4vmkv3rits" path="res://scenes/quests/story_quests/neural-crisis/Sprites/sonidos/sonidosCC/Hey.mp3" id="8_75eyt"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="8_gxd2f"]
 [ext_resource type="SpriteFrames" uid="uid://b7ibsbe2gbegr" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/neural-crisis_guard_omg.tres" id="8_tp4pg"]
-[ext_resource type="AudioStream" uid="uid://cwxuu2x24r6b7" path="res://scenes/quests/story_quests/neural-crisis/Sprites/sonidos/hey-42237 (1).mp3" id="9_nnjf3"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="9_v0n5i"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="10_tbnoi"]
 [ext_resource type="SpriteFrames" uid="uid://cvckqgj4yftbt" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_dron.tres" id="11_lo7v5"]
 [ext_resource type="Resource" uid="uid://dcibg2wpnbed1" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/neural-crisis_collected.dialogue" id="12_lo7v5"]
 [ext_resource type="Script" uid="uid://rlxro84v6l6v" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/cinemafix.gd" id="14_75eyt"]
-[ext_resource type="AudioStream" uid="uid://cibtgkbykfptw" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/minijuego1.mp3" id="16_5dbtc"]
 [ext_resource type="PackedScene" uid="uid://dua6mynlw2ptw" path="res://scenes/game_elements/props/checkpoint/checkpoint.tscn" id="17_3ykxo"]
+[ext_resource type="AudioStream" uid="uid://dhpf1hsrbdp3i" path="res://scenes/quests/story_quests/neural-crisis/Sprites/sonidos/sonidosCC/Laserpack.mp3" id="17_fq5sq"]
 [ext_resource type="Texture2D" uid="uid://yf3ck21yseei" path="res://scenes/quests/story_quests/neural-crisis/Sprites/minijuego 1/pared.png" id="18_3ykxo"]
 [ext_resource type="SpriteFrames" uid="uid://7jj5h3dajwdl" path="res://scenes/quests/story_quests/neural-crisis/0_neural-crisis_intro/neural-crisis_intro_components/neural-crisis_sigma9.tres" id="18_75eyt"]
 [ext_resource type="Resource" uid="uid://dhnuhd8m8c8fs" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/neural-crisis_stealth.dialogue" id="19_fs2eh"]
@@ -189,6 +189,9 @@ position = Vector2(23.8095, 257.143)
 [node name="InteractMarker" parent="Player/PlayerInteraction" index="1"]
 position = Vector2(-42.8571, -114.286)
 
+[node name="WalkSound" parent="Player" index="7"]
+stream = null
+
 [node name="Camera2D" type="Camera2D" parent="Player"]
 process_mode = 3
 zoom = Vector2(1.7, 1.7)
@@ -205,8 +208,8 @@ position = Vector2(-75, -18)
 position = Vector2(651, 607)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("8_tp4pg")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard1-PatrolPath")
 move_speed = 200.0
 detection_area_scale = 3.8
@@ -235,10 +238,10 @@ offset_bottom = -676.0
 scale = Vector2(2.46102, 3.48563)
 
 [node name="AlertSound" parent="EnemyGuards/Guard1-GoingBackAndForth/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard1-GoingBackAndForth/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard1-PatrolPath" type="Path2D" parent="EnemyGuards"]
 top_level = true
@@ -250,8 +253,8 @@ curve = SubResource("Curve2D_vnsq3")
 position = Vector2(2614, 833)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("8_tp4pg")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard2-RunningPath")
 wait_time = 0.3
 move_speed = 1000.0
@@ -280,10 +283,10 @@ offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
 
 [node name="AlertSound" parent="EnemyGuards/Guard2-RunningInCircles/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard2-RunningInCircles/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard2-RunningPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(2126, 924)
@@ -293,8 +296,8 @@ curve = SubResource("Curve2D_hejm3")
 position = Vector2(195, 757)
 scale = Vector2(0.045, 0.045)
 sprite_frames = ExtResource("11_lo7v5")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard3-PatrolPath")
 wait_time = 0.3
 move_speed = 1000.0
@@ -323,10 +326,11 @@ offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
 
 [node name="AlertSound" parent="EnemyGuards/Guard3/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
+autoplay = true
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard3/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard3-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(195, 757)
@@ -336,8 +340,8 @@ curve = SubResource("Curve2D_3ykxo")
 position = Vector2(201, 1684)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("8_tp4pg")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard4-PatrolPath")
 wait_time = 0.3
 move_speed = 1000.0
@@ -366,10 +370,10 @@ offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
 
 [node name="AlertSound" parent="EnemyGuards/Guard4/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard4/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard4-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(201, 1684)
@@ -379,8 +383,8 @@ curve = SubResource("Curve2D_lo7v5")
 position = Vector2(621, 1763)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("8_tp4pg")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard5-PatrolPath")
 wait_time = 0.1
 detection_area_scale = 1.6
@@ -408,10 +412,10 @@ offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
 
 [node name="AlertSound" parent="EnemyGuards/Guard5/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard5/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard5-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(621, 1763)
@@ -421,8 +425,8 @@ curve = SubResource("Curve2D_75eyt")
 position = Vector2(881, 1384)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("8_tp4pg")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard6-PatrolPath")
 wait_time = 0.3
 move_speed = 300.0
@@ -451,10 +455,10 @@ offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
 
 [node name="AlertSound" parent="EnemyGuards/Guard6/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard6/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard6-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(881, 1384)
@@ -464,8 +468,8 @@ curve = SubResource("Curve2D_fs2eh")
 position = Vector2(1122, 1760)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("8_tp4pg")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard7-PatrolPath")
 wait_time = 0.2
 move_speed = 500.0
@@ -494,10 +498,10 @@ offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
 
 [node name="AlertSound" parent="EnemyGuards/Guard7/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard7/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard7-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(1122, 1760)
@@ -507,8 +511,8 @@ curve = SubResource("Curve2D_fq5sq")
 position = Vector2(1414, 1149)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("8_tp4pg")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard8-PatrolPath")
 move_speed = 500.0
 detection_area_scale = 1.6
@@ -541,10 +545,10 @@ offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
 
 [node name="AlertSound" parent="EnemyGuards/Guard8/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard8/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 volume_db = 16.667
 
 [node name="Guard8-PatrolPath" type="Path2D" parent="EnemyGuards"]
@@ -555,8 +559,8 @@ curve = SubResource("Curve2D_srgwb")
 position = Vector2(870, 842)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("8_tp4pg")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard9-PatrolPath")
 wait_time = 2.0
 move_speed = 500.0
@@ -593,10 +597,10 @@ offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
 
 [node name="AlertSound" parent="EnemyGuards/Guard9/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard9/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard9-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(870, 842)
@@ -606,8 +610,8 @@ curve = SubResource("Curve2D_eti0j")
 position = Vector2(1820, 269)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("8_tp4pg")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard10-PatrolPath")
 wait_time = 0.5
 move_speed = 500.0
@@ -644,10 +648,10 @@ offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
 
 [node name="AlertSound" parent="EnemyGuards/Guard10/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard10/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard10-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(1820, 269)
@@ -657,8 +661,8 @@ curve = SubResource("Curve2D_5pksg")
 position = Vector2(1815, 1632)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("8_tp4pg")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard11-PatrolPath")
 move_speed = 500.0
 detection_area_scale = 1.6
@@ -696,10 +700,10 @@ offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
 
 [node name="AlertSound" parent="EnemyGuards/Guard11/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard11/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard11-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(1815, 1632)
@@ -709,8 +713,8 @@ curve = SubResource("Curve2D_4qygq")
 position = Vector2(3724, 1773)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("11_lo7v5")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard12-PatrolPath")
 wait_time = 0.3
 move_speed = 300.0
@@ -747,12 +751,13 @@ offset_top = -730.0
 offset_right = 63.9995
 offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
+metadata/_edit_use_anchors_ = true
 
 [node name="AlertSound" parent="EnemyGuards/Guard12/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard12/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard12-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(3704, 1752)
@@ -762,8 +767,8 @@ curve = SubResource("Curve2D_cr3ht")
 position = Vector2(3726, 1322)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("11_lo7v5")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard13-PatrolPath")
 wait_time = 0.3
 move_speed = 300.0
@@ -800,12 +805,13 @@ offset_top = -730.0
 offset_right = 63.9995
 offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
+metadata/_edit_use_anchors_ = true
 
 [node name="AlertSound" parent="EnemyGuards/Guard13/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard13/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard13-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(3726, 1322)
@@ -815,8 +821,8 @@ curve = SubResource("Curve2D_qnlny")
 position = Vector2(3727, 1142)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("11_lo7v5")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard14-PatrolPath")
 wait_time = 0.3
 move_speed = 300.0
@@ -853,12 +859,13 @@ offset_top = -730.0
 offset_right = 63.9995
 offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
+metadata/_edit_use_anchors_ = true
 
 [node name="AlertSound" parent="EnemyGuards/Guard14/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard14/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard14-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(3727, 1142)
@@ -868,8 +875,8 @@ curve = SubResource("Curve2D_op8sw")
 position = Vector2(3724, 954)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("11_lo7v5")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard15-PatrolPath")
 wait_time = 0.3
 move_speed = 300.0
@@ -906,12 +913,13 @@ offset_top = -730.0
 offset_right = 63.9995
 offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
+metadata/_edit_use_anchors_ = true
 
 [node name="AlertSound" parent="EnemyGuards/Guard15/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard15/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard15-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(3724, 954)
@@ -921,8 +929,8 @@ curve = SubResource("Curve2D_s13c7")
 position = Vector2(2905, 963)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("11_lo7v5")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard16-PatrolPath")
 wait_time = 0.3
 move_speed = 300.0
@@ -961,10 +969,10 @@ offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
 
 [node name="AlertSound" parent="EnemyGuards/Guard16/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard16/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard16-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(2905, 963)
@@ -974,8 +982,8 @@ curve = SubResource("Curve2D_icrg3")
 position = Vector2(2911, 1164)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("11_lo7v5")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard17-PatrolPath")
 wait_time = 0.3
 move_speed = 300.0
@@ -1014,10 +1022,10 @@ offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
 
 [node name="AlertSound" parent="EnemyGuards/Guard17/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard17/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard17-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(2911, 1164)
@@ -1027,8 +1035,8 @@ curve = SubResource("Curve2D_wkyj2")
 position = Vector2(3140, 1751)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("11_lo7v5")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard18-PatrolPath")
 wait_time = 0.3
 move_speed = 300.0
@@ -1065,12 +1073,13 @@ offset_top = -730.0
 offset_right = 63.9995
 offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
+metadata/_edit_use_anchors_ = true
 
 [node name="AlertSound" parent="EnemyGuards/Guard18/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard18/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard18-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(3140, 1751)
@@ -1080,8 +1089,8 @@ curve = SubResource("Curve2D_g7w0u")
 position = Vector2(3727, 1767)
 scale = Vector2(0.1, 0.1)
 sprite_frames = ExtResource("11_lo7v5")
-alerted_sound_stream = ExtResource("9_nnjf3")
-alert_others_sound_stream = ExtResource("9_nnjf3")
+alerted_sound_stream = ExtResource("8_75eyt")
+alert_others_sound_stream = ExtResource("8_75eyt")
 patrol_path = NodePath("../Guard19-PatrolPath")
 wait_time = 0.3
 move_speed = 300.0
@@ -1098,12 +1107,12 @@ position = Vector2(-6.25038, 18.1241)
 scale = Vector2(1.70724, 1.67088)
 
 [node name="CollisionPolygon2D" parent="EnemyGuards/Guard19/DetectionArea" index="1"]
-position = Vector2(-318.75, -644.376)
+position = Vector2(-1512.5, -694.374)
 scale = Vector2(5.12962, 5.4639)
 one_way_collision_margin = 0.0
 
 [node name="AnimatedSprite2D" parent="EnemyGuards/Guard19" index="4"]
-position = Vector2(19.9997, -20)
+position = Vector2(-1800, 10)
 scale = Vector2(0.527344, 0.721876)
 sprite_frames = ExtResource("11_lo7v5")
 animation = &"walk"
@@ -1118,12 +1127,13 @@ offset_top = -730.0
 offset_right = 63.9995
 offset_bottom = -606.0
 scale = Vector2(1.98901, 2.31076)
+metadata/_edit_use_anchors_ = true
 
 [node name="AlertSound" parent="EnemyGuards/Guard19/Sounds" index="0"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="TorchHitSound" parent="EnemyGuards/Guard19/Sounds" index="3"]
-stream = ExtResource("9_nnjf3")
+stream = ExtResource("8_75eyt")
 
 [node name="Guard19-PatrolPath" type="Path2D" parent="EnemyGuards"]
 position = Vector2(3727, 1767)
@@ -1150,7 +1160,7 @@ metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 [node name="Music" type="Node2D" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music"]
-stream = ExtResource("16_5dbtc")
+stream = ExtResource("17_fq5sq")
 volume_db = -15.036
 autoplay = true
 

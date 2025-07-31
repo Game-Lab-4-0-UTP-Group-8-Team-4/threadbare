@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bxopr8f8kr2dc" path="res://scenes/quests/story_quests/neural-crisis/Sprites/humosl/humoooo08.png" id="17_s4iqp"]
 [ext_resource type="SpriteFrames" uid="uid://7n6qmj6a82v3" path="res://scenes/quests/story_quests/neural-crisis/4_neural-crisis_outro/neural-crisis_outro_components/neural-crisis_humo.tres" id="18_gn5pw"]
 [ext_resource type="Texture2D" uid="uid://bpp5tq4sx0pmu" path="res://scenes/quests/story_quests/neural-crisis/Sprites/humosl/humoooo09.png" id="18_v8jhd"]
-[ext_resource type="AudioStream" uid="uid://cibtgkbykfptw" path="res://scenes/quests/story_quests/neural-crisis/1_neural-crisis_stealth/neural-crisis_stealth_components/minijuego1.mp3" id="28_3uyt1"]
+[ext_resource type="AudioStream" uid="uid://bip88laqo1moe" path="res://scenes/quests/story_quests/neural-crisis/Sprites/sonidos/sonidosCC/Voxel Revolution.mp3" id="19_j7ryi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n037h"]
 atlas = ExtResource("6_q0cqs")
@@ -272,7 +272,7 @@ sprite_frames = ExtResource("18_gn5pw")
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("28_3uyt1")
+stream = ExtResource("19_j7ryi")
 volume_db = -15.036
 autoplay = true
 
