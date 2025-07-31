@@ -3202,7 +3202,6 @@ texture = ExtResource("2_skily")
 31:31/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uwknt"]
-load_path = "res://.godot/imported/1000_F_489114224_rNW6VL5GjJucMpX.png-c07f17665bc7aab3b184df3688dc9b83.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mcwip"]
 texture = SubResource("CompressedTexture2D_uwknt")

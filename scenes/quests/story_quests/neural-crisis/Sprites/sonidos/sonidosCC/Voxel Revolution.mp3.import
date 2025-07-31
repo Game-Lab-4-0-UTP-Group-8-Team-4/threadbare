@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bip88laqo1moe"
+path="res://.godot/imported/Voxel Revolution.mp3-148ad845598273a2f1a3f51ddbf8b14c.mp3str"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/neural-crisis/Sprites/sonidos/sonidosCC/Voxel Revolution.mp3"
+dest_files=["res://.godot/imported/Voxel Revolution.mp3-148ad845598273a2f1a3f51ddbf8b14c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
